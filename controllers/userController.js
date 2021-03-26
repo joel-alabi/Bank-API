@@ -48,7 +48,7 @@ const signinController = async (req,res)=>{
 
   const token= jwt.sign(
       {name:user.name,email:user.email,userId:user._id},
-      'supersecretkeythatcannotbe easilyquessed',
+      'supersecretkeythatcannotbeeasilyquessed',
       {expiresIn:"1h"});
    return res.json({message:"user signed in",token});
 
